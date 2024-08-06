@@ -179,7 +179,7 @@ export const updateAccessToken = catchAsyncError(async (req,res, next) => {
     try {
         const refresh_token = req.cookies.refresh_token;
         if(!refresh_token){
-           return  res.json({status:404,message:"user not found"})
+           return  res.json({status:404,message:"user not found update access token"})
         }
         const decoded = jwt.verify(refresh_token,process.env.REFRESH_TOKEN);
          
