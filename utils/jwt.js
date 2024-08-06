@@ -33,10 +33,10 @@ export const sendToken = async (user, statusCode, res) => {
 
     //application production
 
-    // if (process.env.NODE_ENV === 'production') {
-    //     accessTokenOptions.secure = true;
+    if (process.env.NODE_ENV === 'production') {
+        accessTokenOptions.secure = true;
 
-    // }
+    }
 
     res.cookie('access_token', accessToken,accessTokenOptions)
     res.cookie('refresh_token', refreshToken, refreshTokenOptions);
