@@ -9,14 +9,16 @@ export  const accessTokenOptions = {
     expires: new Date(Date.now() + accessTokenExpire * 60 * 1000),
     maxAge: accessTokenExpire * 60 * 1000,
     httpOnly: true,
-    sameSite: "lax"
+    sameSite: "none",
+    secure:true
 }
 // console.log(new Date(new Date() + accessTokenExpire * 60 * 60 * 1000),);
 export  const refreshTokenOptions = {
         expires: new Date(Date.now()  + refreshTokenExpire * 24 * 60 * 60 * 1000),
         maxAge: refreshTokenExpire * 24 * 60 * 60 * 1000,
         httpOnly: true,
-        sameSite: "lax"
+        sameSite: "none",
+        secure:true
     }
 
 export const sendToken = async (user, statusCode, res) => {
