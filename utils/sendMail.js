@@ -20,7 +20,7 @@ const sendMail=async(options)=>{
     const {email,subject,template,data}=options;
 
     // ENOENT: no such file or directory, open 'mails/activation-mail.ejs
-      const templatePath= path.join("utils","../mails",template);
+      const templatePath= path.join("mails",template);
 
     let html=await ejs.renderFile(templatePath,data);
    const mailOptions={
