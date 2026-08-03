@@ -28,7 +28,7 @@ export const sendToken = async (user, statusCode, res) => {
 
     // load session to redis
 
-     await redis.set(user._id, JSON.stringify(user));
+     // await redis.set(user._id, JSON.stringify(user));
 
     // parse environment varible to integrates with falback values
     
